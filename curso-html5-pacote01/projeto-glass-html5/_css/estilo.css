@@ -9,7 +9,18 @@ p{
     text-align: justify;
     text-indent: 50px;
 }
+
+a{
+    color: #606060;
+    text-align: 50px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
 body{
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #dddddd;
     color: rgba(0, 0, 0, 1);
 }
@@ -23,8 +34,8 @@ div#interface{
 }
 
 header#cabecalho img#icone{
-    position: absolute;
-    left: 1500px;
+    position:absolute;
+    left: 1310px;
     top: 75px;
 }
 
@@ -86,7 +97,7 @@ nav#menu {
     display: block;
     position: absolute;
     top:-10px;
-    left:1000px;
+    left:850px;
 }
 
 nav#menu ul{
@@ -129,10 +140,68 @@ section#corpo{
     padding-right: 15px;
 }
 
+table#tabelaspec{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* colunas da tabela */
+table#tabelaspec td.ce{
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd{
+    background-color: #cecece;
+}
+
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 10pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
 aside#lateral{
     display: block;
-    width: 600px;
+    width:700px;
     float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+aside#lateral h1{
+    margin-top: 0px;
+    font-family: "FonteLogo", sans-serif;
+    font-size: 20pt;
+    font: #606060;
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
 }
 
 footer#rodape{
@@ -142,4 +211,39 @@ footer#rodape{
 
 footer#rodape p{
     text-align: center;
+}
+
+/*artigo*/
+article#noticiaprincipal h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #cecece;
+    padding: 10px 0px 5px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalhoartigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalhoartigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalhoartigo h3{
+    font-size: 13pt;
+    color: #888888;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+.direita{
+    text-align: right;
 }
