@@ -14,7 +14,7 @@
                     <h1>Google Glass</h1>
                     <h2>A revolução do Google está chegando</h2>
                 </hgroup>
-                <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+                <img id="icone" src="_imagens/contato.png">
                 <nav id="menu">
                     <h1>
                         <h1>Menu Principal</h1>
@@ -28,39 +28,109 @@
                     </h1>
                 </nav>
             </header>
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
-
+            <section id="corpo-full">
+                <article>
+                    <header id="cabecalhoartigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contato</h1>
+                            <h2>por Gustavo Guanabara</h2> 
+                            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                        </hgroup>
+                    </header>
+                </article>
+            <form method="POST" id="fContato" action="mailto:letsdelfino@gmail.com" oninput="calcTotal();">
+                <fieldset id="Usuario">
+                    <legend>Identificação do Usuário</legend>
+                        <p><label for="cNome">Nome</label>:<input type="text" name="tNome" id="cNome" size="50" maxlength="60" placeholder="Nome Completo"/></p>
+                        <p><label for="cSenha">Senha</label>:<input type="password" name="tSenha" id="cSenha" size="20" maxlength="20" placeholder="Insida sua senha"/></p>
+                        <p><label for="cEmail">E-mail</label>:<input type="email" name="tEmail" id="cEmail" size="30" maxlength="50" placeholder="Ex: email@email"/></p>
+                        <fieldset>
+                            <legend>Sexo:</legend>
+                                <input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc">Masculino</label><br/>
+                                <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label>
+                        </fieldset>
+                        <p>Data de Nascimento:<input type="date" name="tData" id="cData"/></p>
+                </fieldset>
+                    <fieldset id="endereco">
+                    <legend>Endereço do Usuário</legend>
+                        <p>Logradouro:<input type="text" name="tRua" id="cRua" size="20" maxlength="80" placeholder="Rua, Av., trav.." minlength="5"/></p>
+                        <p>Número:<input type="number" name="tNum" id="cNum" size="4" maxlength="4" minlength="1"/></p>
+                        <p><label id="cEst">Estado:</label>
+                            <select name="tEst" id="cEst">
+                                <optgroup label="Região Norte">
+                                    <option value="Acre">Acre</option>
+                                    <option value="Amapá">Amapá</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Pará">Pará</option>
+                                    <option value="Rondônia">Rondônia</option>
+                                    <option value="Roraima">Roraima</option>
+                                    <option value="Tocantins">Tocantins</option>
+                                </optgroup>
+                                <optgroup label="Região Centro-Oeste">
+                                    <option value="Distrito Federal">Distrito Federal</option>
+                                    <option value="Mato Grosso">Mato Grosso</option>
+                                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="Paraná">Paraná</option>
+                                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                    <option value="Santa Catarina">Santa Catarina</option>
+                                </optgroup>
+                                <optgroup label="Região Sudeste">
+                                    <option value="Espírito Santo">Espírito Santo</option>
+                                    <option value="Goiás">Goiás</option>
+                                    <option value="Minas Gerais">Minas Gerais</option>
+                                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                    <option value="São Paulo">São Paulo</option>
+                                </optgroup>
+                                <optgroup label="Região Nordeste">
+                                    <option value="Bahia">Bahia</option>
+                                    <option value="Ceará">Ceará</option>
+                                    <option value="Alagoas">Alagoas</option>
+                                    <option value="Maranhão">Maranhão</option>
+                                    <option value="Paraíba">Paraíba</option>
+                                    <option value="Pernambuco">Pernambuco</option>
+                                    <option value="Piauí">Piauí</option>
+                                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                    <option value="Sergipe">Sergipe</option>
+                                </optgroup>
+                            </select></p>
+                        <p><label id="cCid">Cidade:<input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua cidade" list="cidade"/></p>
+                            <datalist id="cidade">
+                                <option value="Rido de Janeiro"></option>
+                                <option value="Nova Iguaçu"></option>
+                                <option value="Niteóoi"></option>
+                            </datalist>
+                    </fieldset>
+                <fieldset id="mensagem">
+                    <legend>Mensagem do Usuário</legend>
+                        <p><label for="cUrg">Grau de Urgência:</label><input type="range" name="tUrg" id="cUrg" min="0" max="10" step="1"/></p>
+                        <p><label for="cMens">Mensagem:</label>
+                            <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                        </p>
+                </fieldset>
+                <fieldset id="pedido">
+                    <legend>Quero um Google Glass</legend>
+                        <p>
+                            <input type="checkbox" name="tPe" id="cPed" checked/>
+                            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                        <p>
+                            <label for="cCor">Cor:</label>
+                            <input type="color" name="tCor" id="cCor" value="#0000FF"/>
+                        </p>
+                        <p>
+                            <label for="cQtd">Quantidade:</label>
+                            <input type="number"name="tQtd" id="cQtd" min="0" max="5" value="1"/>
+                        </p>
+                        <p>
+                            <label for="cTot">Preço Total: R$</label>
+                            <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly/>
+                        </p>
+                </fieldset>
+                <input type="submit" name="tEnviar" value="Enviar"/>
+        </form>
         <footer id="rodape">
             <p>Copyright 2013 - by Gustavo Guanabara <br/>
                 <a href="http://facebook.com/cursosemvideo" target="blank">Facebook</a> | <a href="http://twitter.com/cursosemvideo" target="blank">Twitter</a></p>
